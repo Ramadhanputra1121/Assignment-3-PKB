@@ -1,8 +1,8 @@
 # Assignment-3-PKB
 
 # Nama Kelompok
-    1. Narendra Arkan Putra Darmawan
-    2. Muhammad Ramadhan Putra Pratama
+    1. Narendra Arkan Putra Darmawan - 1313621043
+    2. Muhammad Ramadhan Putra Pratama - 1313621038
 
 # Cara Kerja
     1. Import Library:
