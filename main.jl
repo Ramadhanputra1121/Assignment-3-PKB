@@ -43,14 +43,11 @@ end
 boundary_setosa = calculate_boundary(setosa, versicolor)
 boundary_versicolor = calculate_boundary(versicolor, setosa)
 
-setosa_shape = :xcross
-versicolor_shape = :dtriangle
-
 x_values = minimum([minimum(setosa[:, 1]), minimum(versicolor[:, 1])]) - 0.5:0.1:maximum([maximum(setosa[:, 1]), maximum(versicolor[:, 1])]) + 0.5
 
-plot(xlabel=selected_names[1], ylabel=selected_names[2], title="$(selected_names[1]) vs $(selected_names[2])", legend=:topright)
-scatter!(setosa[:, 1], setosa[:, 2], label="Iris-setosa", shape=setosa_shape)
-scatter!(versicolor[:, 1], versicolor[:, 2], label="Iris-versicolor", shape=versicolor_shape)
+plot(xlabel=selected_names[1], ylabel=selected_names[2], title="$(selected_names[1]) vs $(selected_names[2])", legend=:topright, background=:black, size=(960, 720))
+scatter!(setosa[:, 1], setosa[:, 2], label="Iris-setosa", shape=:xcross)
+scatter!(versicolor[:, 1], versicolor[:, 2], label="Iris-versicolor", shape=:dtriangle)
 
 plot!(x_values, x -> ((boundary_setosa[1] * x + boundary_setosa[2]) + (boundary_versicolor[1] * x + boundary_versicolor[2])) / 2, label="Setosa-Versicolor Boundary", color="red")
 
